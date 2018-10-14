@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="n1dus" />
+		<Option makefile_is_custom="1" />
+		<Option execution_dir="${PROJECT_DIR}" />
+		<Option pch_mode="2" />
+		<Option compiler="devkitpro_a64_compiler" />
+		<Build>
+			<Target title="Debug">
+				<Option output="$(PROJECT_NAME)d" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="devkitpro_a64_compiler" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+				<MakeCommands>
+					<Build command="$make -f $makefile DEBUG=1" />
+					<CompileFile command="$make -f $makefile DEBUG=1" />
+					<Clean command="$make -f $makefile DEBUG=1 clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile DEBUG=1 clean" />
+					<SilentBuild command="$make -f $makefile DEBUG=1 &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="Release">
+				<Option output="TemplateCodeBlock" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="devkitpro_a64_compiler" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+				<MakeCommands>
+					<Build command="$make -f $makefile DEBUG=0" />
+					<CompileFile command="$make -f $makefile DEBUG=0" />
+					<Clean command="$make -f $makefile DEBUG=0 clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile DEBUG=0 clean" />
+					<SilentBuild command="$make -f $makefile DEBUG=0 &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Makefile" />
+		<Unit filename="_debug/ConvertUTF.d" />
+		<Unit filename="_debug/SDLHelper.d" />
+		<Unit filename="_debug/SDLRender.d" />
+		<Unit filename="_debug/aes.d" />
+		<Unit filename="_debug/app.d" />
+		<Unit filename="_debug/appInstaller.d" />
+		<Unit filename="_debug/byte_buffer.d" />
+		<Unit filename="_debug/cnmt.d" />
+		<Unit filename="_debug/common.d" />
+		<Unit filename="_debug/content_meta.d" />
+		<Unit filename="_debug/dOpus.d" />
+		<Unit filename="_debug/dlgInstall.d" />
+		<Unit filename="_debug/dummy.d" />
+		<Unit filename="_debug/es.d" />
+		<Unit filename="_debug/extkeys.d" />
+		<Unit filename="_debug/fileHelper.d" />
+		<Unit filename="_debug/filepath.d" />
+		<Unit filename="_debug/fs.d" />
+		<Unit filename="_debug/gui.d" />
+		<Unit filename="_debug/guiFileBrowser.d" />
+		<Unit filename="_debug/hfs0.d" />
+		<Unit filename="_debug/nca.d" />
+		<Unit filename="_debug/ncm.d" />
+		<Unit filename="_debug/ncm_ext.d" />
+		<Unit filename="_debug/ns_ext.d" />
+		<Unit filename="_debug/nsp.d" />
+		<Unit filename="_debug/nspHelper.d" />
+		<Unit filename="_debug/nxUtils.d" />
+		<Unit filename="_debug/pki.d" />
+		<Unit filename="_debug/rsa.d" />
+		<Unit filename="_debug/sha.d" />
+		<Unit filename="_debug/simple_filesystem.d" />
+		<Unit filename="_debug/thread.d" />
+		<Unit filename="_debug/title_util.d" />
+		<Unit filename="_debug/utils.d" />
+		<Unit filename="_debug/virtualFile.d" />
+		<Unit filename="_debug/xci.d" />
+		<Unit filename="_debug/xciHelper.d" />
+		<Unit filename="_release/ConvertUTF.d" />
+		<Unit filename="_release/SDLHelper.d" />
+		<Unit filename="_release/SDLRender.d" />
+		<Unit filename="_release/aes.d" />
+		<Unit filename="_release/app.d" />
+		<Unit filename="_release/appInstaller.d" />
+		<Unit filename="_release/byte_buffer.d" />
+		<Unit filename="_release/cnmt.d" />
+		<Unit filename="_release/common.d" />
+		<Unit filename="_release/content_meta.d" />
+		<Unit filename="_release/dummy.d" />
+		<Unit filename="_release/es.d" />
+		<Unit filename="_release/extkeys.d" />
+		<Unit filename="_release/fileHelper.d" />
+		<Unit filename="_release/filepath.d" />
+		<Unit filename="_release/fs.d" />
+		<Unit filename="_release/gui.d" />
+		<Unit filename="_release/guiFileBrowser.d" />
+		<Unit filename="_release/hfs0.d" />
+		<Unit filename="_release/nca.d" />
+		<Unit filename="_release/ncm.d" />
+		<Unit filename="_release/ncm_ext.d" />
+		<Unit filename="_release/ns_ext.d" />
+		<Unit filename="_release/nsp.d" />
+		<Unit filename="_release/nspHelper.d" />
+		<Unit filename="_release/nxUtils.d" />
+		<Unit filename="_release/pki.d" />
+		<Unit filename="_release/rsa.d" />
+		<Unit filename="_release/sha.d" />
+		<Unit filename="_release/simple_filesystem.d" />
+		<Unit filename="_release/title_util.d" />
+		<Unit filename="_release/utils.d" />
+		<Unit filename="_release/xci.d" />
+		<Unit filename="_release/xciHelper.d" />
+		<Unit filename="externals/4NXCI/ConvertUTF.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/ConvertUTF.h" />
+		<Unit filename="externals/4NXCI/aes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/aes.h" />
+		<Unit filename="externals/4NXCI/bktr.h" />
+		<Unit filename="externals/4NXCI/cnmt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/cnmt.h" />
+		<Unit filename="externals/4NXCI/dummy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/dummy.h" />
+		<Unit filename="externals/4NXCI/dummy_files.h" />
+		<Unit filename="externals/4NXCI/extkeys.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/extkeys.h" />
+		<Unit filename="externals/4NXCI/filepath.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/filepath.h" />
+		<Unit filename="externals/4NXCI/hfs0.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/hfs0.h" />
+		<Unit filename="externals/4NXCI/ivfc.h" />
+		<Unit filename="externals/4NXCI/mbedtls/configs/config-ccm-psk-tls1_2.h" />
+		<Unit filename="externals/4NXCI/mbedtls/configs/config-mini-tls1_1.h" />
+		<Unit filename="externals/4NXCI/mbedtls/configs/config-no-entropy.h" />
+		<Unit filename="externals/4NXCI/mbedtls/configs/config-picocoin.h" />
+		<Unit filename="externals/4NXCI/mbedtls/configs/config-suite-b.h" />
+		<Unit filename="externals/4NXCI/mbedtls/configs/config-thread.h" />
+		<Unit filename="externals/4NXCI/mbedtls/doxygen/input/doc_encdec.h" />
+		<Unit filename="externals/4NXCI/mbedtls/doxygen/input/doc_hashing.h" />
+		<Unit filename="externals/4NXCI/mbedtls/doxygen/input/doc_mainpage.h" />
+		<Unit filename="externals/4NXCI/mbedtls/doxygen/input/doc_rng.h" />
+		<Unit filename="externals/4NXCI/mbedtls/doxygen/input/doc_ssltls.h" />
+		<Unit filename="externals/4NXCI/mbedtls/doxygen/input/doc_tcpip.h" />
+		<Unit filename="externals/4NXCI/mbedtls/doxygen/input/doc_x509.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/aes.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/aesni.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/arc4.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/asn1.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/asn1write.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/base64.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/bignum.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/blowfish.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/bn_mul.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/camellia.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/ccm.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/certs.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/check_config.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/cipher.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/cipher_internal.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/cmac.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/compat-1.3.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/config.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/ctr_drbg.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/debug.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/des.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/dhm.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/ecdh.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/ecdsa.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/ecjpake.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/ecp.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/ecp_internal.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/entropy.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/entropy_poll.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/error.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/gcm.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/gf128mul.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/havege.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/hmac_drbg.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/md.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/md2.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/md4.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/md5.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/md_internal.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/memory_buffer_alloc.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/net.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/net_sockets.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/oid.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/padlock.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/pem.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/pk.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/pk_internal.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/pkcs11.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/pkcs12.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/pkcs5.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/platform.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/platform_time.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/ripemd160.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/rsa.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/rsa_internal.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/sha1.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/sha256.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/sha512.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/ssl.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/ssl_cache.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/ssl_ciphersuites.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/ssl_cookie.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/ssl_internal.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/ssl_ticket.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/threading.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/timing.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/version.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/x509.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/x509_crl.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/x509_crt.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/x509_csr.h" />
+		<Unit filename="externals/4NXCI/mbedtls/include/mbedtls/xtea.h" />
+		<Unit filename="externals/4NXCI/mbedtls/library/aes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/aes.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/aesni.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/aesni.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/arc4.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/arc4.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/asn1parse.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/asn1parse.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/asn1write.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/asn1write.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/base64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/base64.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/bignum.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/bignum.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/blowfish.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/blowfish.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/camellia.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/camellia.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/ccm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/ccm.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/certs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/certs.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/cipher.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/cipher.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/cipher_wrap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/cipher_wrap.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/cmac.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/cmac.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/ctr_drbg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/ctr_drbg.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/debug.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/debug.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/des.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/des.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/dhm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/dhm.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/ecdh.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/ecdh.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/ecdsa.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/ecdsa.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/ecjpake.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/ecjpake.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/ecp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/ecp.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/ecp_curves.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/ecp_curves.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/entropy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/entropy.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/entropy_poll.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/entropy_poll.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/error.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/error.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/gcm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/gcm.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/gf128mul.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/gf128mul.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/havege.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/havege.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/hmac_drbg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/hmac_drbg.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/md.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/md.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/md2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/md2.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/md4.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/md4.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/md5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/md5.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/md_wrap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/md_wrap.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/memory_buffer_alloc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/memory_buffer_alloc.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/net_sockets.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/net_sockets.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/oid.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/oid.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/padlock.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/padlock.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/pem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/pem.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/pk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/pk.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/pk_wrap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/pk_wrap.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/pkcs11.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/pkcs11.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/pkcs12.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/pkcs12.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/pkcs5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/pkcs5.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/pkparse.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/pkparse.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/pkwrite.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/pkwrite.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/platform.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/platform.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/ripemd160.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/ripemd160.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/rsa.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/rsa.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/rsa_internal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/sha1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/sha1.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/sha256.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/sha256.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/sha512.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/sha512.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/ssl_cache.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/ssl_cache.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/ssl_ciphersuites.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/ssl_ciphersuites.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/ssl_cli.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/ssl_cli.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/ssl_cookie.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/ssl_cookie.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/ssl_srv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/ssl_srv.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/ssl_ticket.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/ssl_ticket.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/ssl_tls.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/ssl_tls.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/threading.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/threading.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/timing.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/timing.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/version.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/version.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/version_features.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/version_features.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/x509.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/x509.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/x509_create.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/x509_create.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/x509_crl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/x509_crl.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/x509_crt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/x509_crt.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/x509_csr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/x509_csr.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/x509write_crt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/x509write_crt.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/x509write_csr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/x509write_csr.d" />
+		<Unit filename="externals/4NXCI/mbedtls/library/xtea.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/library/xtea.d" />
+		<Unit filename="externals/4NXCI/mbedtls/programs/aes/aescrypt2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/aes/crypt_and_hash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/hash/generic_sum.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/hash/hello.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/pkey/dh_client.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/pkey/dh_genprime.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/pkey/dh_server.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/pkey/ecdh_curve25519.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/pkey/ecdsa.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/pkey/gen_key.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/pkey/key_app.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/pkey/key_app_writer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/pkey/mpi_demo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/pkey/pk_decrypt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/pkey/pk_encrypt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/pkey/pk_sign.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/pkey/pk_verify.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/pkey/rsa_decrypt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/pkey/rsa_encrypt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/pkey/rsa_genkey.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/pkey/rsa_sign.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/pkey/rsa_sign_pss.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/pkey/rsa_verify.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/pkey/rsa_verify_pss.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/random/gen_entropy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/random/gen_random_ctr_drbg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/random/gen_random_havege.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/ssl/dtls_client.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/ssl/dtls_server.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/ssl/mini_client.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/ssl/ssl_client1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/ssl/ssl_client2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/ssl/ssl_fork_server.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/ssl/ssl_mail_client.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/ssl/ssl_pthread_server.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/ssl/ssl_server.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/ssl/ssl_server2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/test/benchmark.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/test/selftest.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/test/ssl_cert_test.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/test/udp_proxy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/util/pem2der.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/util/strerror.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/wince_main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/x509/cert_app.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/x509/cert_req.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/x509/cert_write.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/x509/crl_app.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/programs/x509/req_app.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/yotta/data/entropy_hardware_poll.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/mbedtls/yotta/data/example-authcrypt/main.cpp" />
+		<Unit filename="externals/4NXCI/mbedtls/yotta/data/example-benchmark/main.cpp" />
+		<Unit filename="externals/4NXCI/mbedtls/yotta/data/example-hashing/main.cpp" />
+		<Unit filename="externals/4NXCI/mbedtls/yotta/data/example-selftest/main.cpp" />
+		<Unit filename="externals/4NXCI/mbedtls/yotta/data/target_config.h" />
+		<Unit filename="externals/4NXCI/nca.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/nca.h" />
+		<Unit filename="externals/4NXCI/npdm.h" />
+		<Unit filename="externals/4NXCI/nsp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/nsp.h" />
+		<Unit filename="externals/4NXCI/pfs0.h" />
+		<Unit filename="externals/4NXCI/pki.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/pki.h" />
+		<Unit filename="externals/4NXCI/rsa.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/rsa.h" />
+		<Unit filename="externals/4NXCI/settings.h" />
+		<Unit filename="externals/4NXCI/sha.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/sha.h" />
+		<Unit filename="externals/4NXCI/types.h" />
+		<Unit filename="externals/4NXCI/utils.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/utils.h" />
+		<Unit filename="externals/4NXCI/version.h" />
+		<Unit filename="externals/4NXCI/xci.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/4NXCI/xci.h" />
+		<Unit filename="externals/Tinfoil/include/data/byte_buffer.hpp" />
+		<Unit filename="externals/Tinfoil/include/install/simple_filesystem.hpp" />
+		<Unit filename="externals/Tinfoil/include/nx/content_meta.hpp" />
+		<Unit filename="externals/Tinfoil/include/nx/fs.hpp" />
+		<Unit filename="externals/Tinfoil/include/nx/ipc/es.h" />
+		<Unit filename="externals/Tinfoil/include/nx/ipc/ns_ext.h" />
+		<Unit filename="externals/Tinfoil/include/nx/ipc/tin_ipc.h" />
+		<Unit filename="externals/Tinfoil/include/nx/ncm.hpp" />
+		<Unit filename="externals/Tinfoil/include/util/title_util.hpp" />
+		<Unit filename="externals/Tinfoil/source/data/byte_buffer.cpp" />
+		<Unit filename="externals/Tinfoil/source/install/simple_filesystem.cpp" />
+		<Unit filename="externals/Tinfoil/source/nx/content_meta.cpp" />
+		<Unit filename="externals/Tinfoil/source/nx/fs.cpp" />
+		<Unit filename="externals/Tinfoil/source/nx/ipc/es.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/Tinfoil/source/nx/ipc/ns_ext.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="externals/Tinfoil/source/nx/ncm.cpp" />
+		<Unit filename="externals/Tinfoil/source/util/title_util.cpp" />
+		<Unit filename="nxFramework/SDL/SDLHelper.cpp" />
+		<Unit filename="nxFramework/SDL/SDLHelper.h" />
+		<Unit filename="nxFramework/SDL/SDLRender.cpp" />
+		<Unit filename="nxFramework/SDL/SDLRender.h" />
+		<Unit filename="nxFramework/app.cpp" />
+		<Unit filename="nxFramework/app.h" />
+		<Unit filename="nxFramework/common.cpp" />
+		<Unit filename="nxFramework/common.h" />
+		<Unit filename="nxFramework/fileHelper.cpp" />
+		<Unit filename="nxFramework/filehelper.h" />
+		<Unit filename="nxFramework/nspHelper.cpp" />
+		<Unit filename="nxFramework/nspHelper.h" />
+		<Unit filename="nxFramework/nxUtils.cpp" />
+		<Unit filename="nxFramework/nxUtils.h" />
+		<Unit filename="nxFramework/virtualFile.cpp" />
+		<Unit filename="nxFramework/virtualFile.h" />
+		<Unit filename="nxFramework/xciHelper.cpp" />
+		<Unit filename="nxFramework/xciHelper.h" />
+		<Unit filename="source/dlgInstall.cpp" />
+		<Unit filename="source/dlgInstall.h" />
+		<Unit filename="source/gui.cpp" />
+		<Unit filename="source/gui.h" />
+		<Unit filename="source/guiFileBrowser.cpp" />
+		<Unit filename="source/guiFileBrowser.h" />
+		<Unit filename="source/n1dus.cpp" />
+		<Unit filename="source/n1dus.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

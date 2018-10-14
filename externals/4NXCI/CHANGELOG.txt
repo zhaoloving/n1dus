@@ -1,0 +1,53 @@
+v1.35:
+4NXCI no longer creates dummy tik and cert by default
+
+v1.30:
+Added Options
+Added option for skipping dummy cert and tik creation
+Added option for manually loading keyset file
+Removed rightsid calculation for NCA Metadatas
+
+v1.21:
+Fixed a bug cause crash when converting gamecards with 1 dlc
+
+v1.20:
+Added support for gamecards with more than one dlc
+Fixed a bug cause wrong keygeneration value in xml metadata
+
+v1.10:
+Added cert and tik packing for download type cnmts
+Fixed a bug cause random meta id and hash values in xml metadata
+Fixed a bug cause random metadata nca filename in created nsp
+Changed dummy tik titleid
+
+v1.00:
+Increased conversion speed (buffer size is now 100MB)
+Modified most parts of dummy cert
+Minor console output changes
+Improved stability
+
+v0.9-beta.2:
+Improved stability
+
+v0.9-beta.1:
+Added support for all xcis
+Added dynamic nsp creation based on metadata
+Fixed a bug which cause program crash and bad nsps due to program nca hash miscalculation
+Improved stability
+
+v0.9-apha.5:
+Added support for current sig patches
+Enhanced meta nca creation
+
+v0.9-apha.4:
+Added meta nca encryption (for supporting all nsp installers)
+
+V0.9-alpha.3:
+4NXCI now rebuilds meta nca
+Fixed xml meta line breaker bug
+
+V0.9-alpha.2:
+Fixed large file support problem in 32-bit builds.
+
+v0.9-alpha.1:
+Initial Release.
