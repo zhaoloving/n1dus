@@ -12,7 +12,7 @@ DISCLAIMER: Use n1dus at your own risk. I'm not responsible for any damage, data
 * Install an extracted NSP or XCI (NCA folder)
 * Extract NSP, XCI to a folder
 * Convert XCI to NSP
-* Can install NSP and XCI (split) files larger than 4GB on a FAT32 SD Card. No more need for exFAT :)
+* Can install NSP and XCI (split) files larger than 4GB on a FAT32 SD Card. No more need for exFAT :) NCA files over 4GB are now handled through a virtual file access that chunks read/write operations automatically.
 
 
 ## Installation
