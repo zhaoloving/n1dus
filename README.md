@@ -14,15 +14,18 @@ DISCLAIMER: Use n1dus at your own risk. I'm not responsible for any damage, data
 * Convert XCI to NSP
 * Can install NSP and XCI (split) files larger than 4GB on a FAT32 SD Card. No more need for exFAT :)
 
+
 ## Installation
 * Place n1dus.nro in /switch folder on your sd card.
 * Requires `sdmc:/keys.dat` in order to extract/install XCI files. 
 
 Keys can be extracted using [tesnos' kezplez](https://github.com/tesnos/kezplez-nx/tree/v1.0) or [shchmue's fork of kezplez](https://github.com/shchmue/kezplez-nx/releases). Hers supports the fuses and TSEC being dumped in multiple locations as well as also supporting firmware 6.0.
 
+
 ## Usage
 * Launch n1dus via hbmenu.
 * Follow the on screen instructions.
+
 
 ## Installing files over 4GB
 * Split files using either AnalogMan151 [splitNSP](https://github.com/AnalogMan151/splitNSP), or my slightly modified version in tools/splitFile.py (will handle both XCI and NSP file extensions, and set the archive bit for you under windows). 
