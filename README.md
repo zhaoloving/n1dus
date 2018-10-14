@@ -8,7 +8,7 @@ DISCLAIMER: Use n1dus at your own risk. I'm not responsible for any damage, data
 
 ## Features
 * File browser like interface
-* Install or "Install & Delete" NSP, XCI
+* Install or "Install & Delete" NSP, XCI 
 * Install an extracted NSP or XCI (NCA folder)
 * Extract NSP, XCI to a folder
 * Convert XCI to NSP
@@ -25,6 +25,8 @@ Keys can be extracted using [tesnos' kezplez](https://github.com/tesnos/kezplez-
 ## Usage
 * Launch n1dus via hbmenu.
 * Follow the on screen instructions.
+* You can install to the SD Card or NAND. 
+* Required firmware version are always ignored.
 
 
 ## Installing files over 4GB
