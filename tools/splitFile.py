@@ -42,7 +42,7 @@ def splitQuick(filepath):
         shutil.rmtree(dir)
     os.makedirs(dir)
 
-    if (os.name != "posix"):
+    if (os.name == "nt"):
         if os.path.exists(dir):
             subprocess.call(['attrib', '+a', dir])
 
@@ -109,7 +109,7 @@ def splitCopy(filepath):
         shutil.rmtree(dir)
     os.makedirs(dir)
 
-    if (os.name != "posix"):
+    if (os.name == "nt"):
         if os.path.exists(dir):
             subprocess.call(['attrib', '+a', dir])
 
