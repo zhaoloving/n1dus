@@ -15,12 +15,18 @@ startTime = datetime.now()
 splitSize = 0xFFFF0000 # 4,294,901,760 bytes
 chunkSize = 0x8000 # 32,768 bytes
 
+FNULL = open(os.devnull, 'w')
+
+def checkCommand(name):
+    from shutil import which
+    return which(name) is not None
+
 from os.path import splitext
 def splitext_(path):
     if len(path.split('.')) > 2:
         return path.split('.')[0],'.'.join(path.split('.')[-2:])
     return splitext(path)
-	
+    
 def splitQuick(filepath):
     fileSize = os.path.getsize(filepath)
     info = shutil.disk_usage(os.path.dirname(os.path.abspath(filepath)))
@@ -42,8 +48,26 @@ def splitQuick(filepath):
         shutil.rmtree(dir)
     os.makedirs(dir)
 
-    if os.path.exists(dir):
-        subprocess.call(['attrib', '+a', dir])
+    if (os.name == "nt"):
+        if os.path.exists(dir):
+            subprocess.call(['attrib', '+a', dir])
+    elif (os.name == "posix"):
+        if checkCommand("mattrib"):
+            if os.path.exists(dir):
+                try:
+                    subprocess.check_call(['mattrib', '+a', dir], stdin=FNULL, stdout=FNULL, stderr=FNULL)
+                except subprocess.CalledProcessError:
+                    print('Could not set archivbit! Probably not a Windows Filesystem!')
+                except OSError:
+                    pass # executable not found
+        else:
+            print('Could not set archivbit!')
+            print('mtools are not installed.')
+            print('You need to set it manually for the folder! Or install mtools and restart the job.')
+    else:
+        print('Could not set archivbit! Environment unknown!')
+        print('You need to set it manually for the folder!')
+
 
     # Move input file to directory and rename it to first part
     filename = os.path.basename(filepath)
@@ -108,8 +132,26 @@ def splitCopy(filepath):
         shutil.rmtree(dir)
     os.makedirs(dir)
 
-    if os.path.exists(dir):
-        subprocess.call(['attrib', '+a', dir])
+    if (os.name == "nt"):
+        if os.path.exists(dir):
+            subprocess.check_call(['attrib', '+a', dir])
+    elif (os.name == "posix"):
+        if checkCommand("mattrib"):
+            if os.path.exists(dir):
+                try:
+                    subprocess.check_call(['mattrib', '+a', dir], stdin=FNULL, stdout=FNULL, stderr=FNULL)
+                except subprocess.CalledProcessError:
+                    print('Could not set archivbit! Probably not a Windows Filesystem!')
+                except OSError:
+                    pass # executable not found
+        else:
+            print('Could not set archivbit!')
+            print('mtools are not installed.')
+            print('You need to set it manually for the folder! Or install mtools and restart the job.')
+    else:
+        print('Could not set archivbit! Environment unknown!')
+        print('You need to set it manually for the folder!')
+
 
     remainingSize = fileSize
 
