@@ -52,7 +52,7 @@ def splitQuick(filepath):
     elif (os.name == "posix"):
         if checkCommand("mattrib"):
             if os.path.exists(dir):
-                subprocess.call(['mattrib', '+a', dir])
+                subprocess.call(['mattrib', '+a', dir, '>/dev/null', '2>&1', '||', 'echo', '"Could not set archivbit! Probably not a Windows Filesystem!"'])
         else:
             print('Could not set archivbit!')
             print('mtools are not installed.')
@@ -131,7 +131,7 @@ def splitCopy(filepath):
     elif (os.name == "posix"):
         if checkCommand("mattrib"):
             if os.path.exists(dir):
-                subprocess.call(['mattrib', '+a', dir])
+                subprocess.call(['mattrib', '+a', dir, '>/dev/null', '2>&1', '||', 'echo', '"Could not set archivbit! Probably not a Windows Filesystem!"'])
         else:
             print('Could not set archivbit!')
             print('mtools are not installed.')
