@@ -26,7 +26,7 @@ def splitext_(path):
     if len(path.split('.')) > 2:
         return path.split('.')[0],'.'.join(path.split('.')[-2:])
     return splitext(path)
-	
+    
 def splitQuick(filepath):
     fileSize = os.path.getsize(filepath)
     info = shutil.disk_usage(os.path.dirname(os.path.abspath(filepath)))
@@ -55,7 +55,7 @@ def splitQuick(filepath):
         if checkCommand("mattrib"):
             if os.path.exists(dir):
                 try:
-                    subprocess.check_call(['attrib', '+a', dir], stdin=FNULL, stdout=FNULL, stderr=FNULL)
+                    subprocess.check_call(['mattrib', '+a', dir], stdin=FNULL, stdout=FNULL, stderr=FNULL)
                 except subprocess.CalledProcessError:
                     print('Could not set archivbit! Probably not a Windows Filesystem!')
                 except OSError:
@@ -134,12 +134,12 @@ def splitCopy(filepath):
 
     if (os.name == "nt"):
         if os.path.exists(dir):
-            subprocess.check_call(['attrib', '+a', dir], stdin=FNULL, stdout=FNULL, stderr=FNULL)
+            subprocess.check_call(['attrib', '+a', dir])
     elif (os.name == "posix"):
         if checkCommand("mattrib"):
             if os.path.exists(dir):
                 try:
-                    subprocess.check_call(['mattrib', '+a', dir])
+                    subprocess.check_call(['mattrib', '+a', dir], stdin=FNULL, stdout=FNULL, stderr=FNULL)
                 except subprocess.CalledProcessError:
                     print('Could not set archivbit! Probably not a Windows Filesystem!')
                 except OSError:
