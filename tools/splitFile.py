@@ -15,6 +15,8 @@ startTime = datetime.now()
 splitSize = 0xFFFF0000 # 4,294,901,760 bytes
 chunkSize = 0x8000 # 32,768 bytes
 
+FNULL = open(os.devnull, 'w')
+
 def checkCommand(name):
     from shutil import which
     return which(name) is not None
