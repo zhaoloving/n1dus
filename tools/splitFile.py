@@ -53,7 +53,7 @@ def splitQuick(filepath):
         if checkCommand("mattrib"):
             if os.path.exists(dir):
                 try:
-                    subprocess.check_call(['mattrib', '+a', dir])
+                    subprocess.check_call(['mattrib', '+a', dir], stdout=FNULL, stderr=subprocess.STDOUT)
                 except subprocess.CalledProcessError:
                     print('Could not set archivbit! Probably not a Windows Filesystem!')
                 except OSError:
@@ -132,7 +132,7 @@ def splitCopy(filepath):
 
     if (os.name == "nt"):
         if os.path.exists(dir):
-            subprocess.call(['attrib', '+a', dir])
+            subprocess.call(['attrib', '+a', dir], stdout=FNULL, stderr=subprocess.STDOUT)
     elif (os.name == "posix"):
         if checkCommand("mattrib"):
             if os.path.exists(dir):
