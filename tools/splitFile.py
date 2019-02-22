@@ -42,8 +42,9 @@ def splitQuick(filepath):
         shutil.rmtree(dir)
     os.makedirs(dir)
 
-    if os.path.exists(dir):
-        subprocess.call(['attrib', '+a', dir])
+    if (os.name != "posix"):
+        if os.path.exists(dir):
+            subprocess.call(['attrib', '+a', dir])
 
     # Move input file to directory and rename it to first part
     filename = os.path.basename(filepath)
@@ -108,8 +109,9 @@ def splitCopy(filepath):
         shutil.rmtree(dir)
     os.makedirs(dir)
 
-    if os.path.exists(dir):
-        subprocess.call(['attrib', '+a', dir])
+    if (os.name != "posix"):
+        if os.path.exists(dir):
+            subprocess.call(['attrib', '+a', dir])
 
     remainingSize = fileSize
 
