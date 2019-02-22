@@ -50,18 +50,17 @@ def splitQuick(filepath):
         if os.path.exists(dir):
             subprocess.call(['attrib', '+a', dir])
     elif (os.name == "posix"):
-	if checkCommand("mattrib"):
+        if checkCommand("mattrib"):
             if os.path.exists(dir):
                 subprocess.call(['mattrib', '+a', dir])
-	else:
+        else:
             print('Could not set archivbit!')
-	    print('mtools are not installed.')
+            print('mtools are not installed.')
             print('You need to set it manually for the folder! Or install mtools and restart the job.')
-	
     else:
-	print('Could not set archivbit! Environment unknown!')
-	print('You need to set it manually for the folder!')
-	
+        print('Could not set archivbit! Environment unknown!')
+        print('You need to set it manually for the folder!')
+
 
     # Move input file to directory and rename it to first part
     filename = os.path.basename(filepath)
@@ -130,18 +129,17 @@ def splitCopy(filepath):
         if os.path.exists(dir):
             subprocess.call(['attrib', '+a', dir])
     elif (os.name == "posix"):
-	if checkCommand("mattrib"):
+        if checkCommand("mattrib"):
             if os.path.exists(dir):
                 subprocess.call(['mattrib', '+a', dir])
-	else:
+        else:
             print('Could not set archivbit!')
-	    print('mtools are not installed.')
+            print('mtools are not installed.')
             print('You need to set it manually for the folder! Or install mtools and restart the job.')
-	
     else:
-	print('Could not set archivbit! Environment unknown!')
-	print('You need to set it manually for the folder!')
-	
+        print('Could not set archivbit! Environment unknown!')
+        print('You need to set it manually for the folder!')
+
 
     remainingSize = fileSize
 
